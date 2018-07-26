@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>党纪法规</title>
+    <!-- <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script>if (typeof module === 'object') { window.jQuery = window.$ = module.exports; };</script>
+</head>
+
+<body>
+
+    <div class="head">
+        <div class="heading">
+            <p>为民 &nbsp; 务实 &nbsp; 勤奋 &nbsp; 清廉</p>
+        </div>
+        <div class="subheading">
+            <p class="clearfix">
+                <span>weimin</span>
+                <span>wushi</span>
+                <span>qinfen</span>
+                <span>qinglian</span>
+
+            </p>
+        </div>
+    </div>
+
+    <div class="btn">
+        <div class="btn-item clearfix">
+            <p>1</p>
+            <p>习近平：决胜全面建成小康社会 夺取新时代中国特色社会主义伟大胜利——在中国共产党第十九次全国代表大会上的报告</p>
+        </div>
+        <div class="btn-item clearfix">
+            <p>2</p>
+            <p>习近平：中国特色社会主义进入新时代</p>
+        </div>
+        <div class="btn-item clearfix">
+            <p>3</p>
+            <p>习近平新时代中国特色社会主义思想</p>
+        </div>
+        <div class="btn-item clearfix">
+            <p>4</p>
+            <p>党的十九大指出：坚定不移全面从严治党，不断提高党的执政能力和领导水平</p>
+        </div>
+        <div class="btn-item clearfix">
+            <p>5</p>
+            <p>十九届中央纪委第二次全体会议公报强调：在中国特色社会主义新时代，完成伟大事业必须靠党的领导，党一定要有新气象新作为，要全面贯彻党的十九大精神，以永远在路上的执着把全面从严治党引向深入。</p>
+        </div>
+    </div>
+
+
+    <iframe src="" frameborder="0"></iframe>
+    <div class="back">
+        <a href="#">
+            <img src="images/back-icon.png" alt="">
+        </a>
+    </div>
+    <script type="text/javascript">
+        // 引入 ipcRenderer 模块。
+        var ipcRenderer = require('electron').ipcRenderer;
+        // 引入 remote 模块
+        var remote = require('electron').remote
+        var versionNode = process.version;
+        var versionElectron = process.versions['electron'];
+        // document.getElementById('version-node').innerText = versionNode
+        // document.getElementById('version-electron').innerText = versionElectron
+
+        // document.getElementById('button').onclick = function () {
+        //     var message = document.getElementById('message').value;
+        //     // 使用 ipcRenderer.send 向主进程发送消息。
+        //     ipcRenderer.send('asynchronous-message', message);
+        // }
+
+        // 监听主进程返回的消息
+        // ipcRenderer.on('asynchronous-reply', function (event, arg) {
+        //     alert(arg);
+        // });
+
+        // 获取主进程中的 BrowserWindow 对象
+        // var BrowserWindow = remote.BrowserWindow;
+        // 创建一个渲染进程
+        // var win = new BrowserWindow({ width: 350, height: 500 });
+        // win.loadURL('http://nodejh.com');
+        const { webFrame } = require('electron');
+        webFrame.setVisualZoomLevelLimits(1, 1);
+  
+    </script>
+    <script>
+        $(function () {
+            $(".back").click(function () {
+                $("iframe,.back").hide();
+                $(".btn").show();
+            })
+        })
+
+        $(function () {
+            $(".btn-item").each(function (index) {
+                var item = $(this);
+                item.click(function () {
+                    var n = index + 1;
+                    $("iframe").attr("src", "page" + n + ".html");
+                    $(".btn").hide();
+                    $("iframe,.back").show();
+                })
+            })
+        })
+    </script>
+</body>
+
+</html>

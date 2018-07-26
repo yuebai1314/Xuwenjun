@@ -1,0 +1,33 @@
+{
+  "name": "your-app",
+  "version": "0.1.0",
+  "main": "main.js",
+  "devDependencies": {
+    "electron": "^2.0.0",
+    "electron-packager": "^12.0.2"
+  },
+  "build": {
+    "appId": "com.leon.HelloWorld",
+    "copyright": "LEON",
+    "productName": "为民",
+    "dmg": {
+      "background": "res/background.png",
+      "window": {
+        "x": 100,
+        "y": 100,
+        "width": 500,
+        "height": 300
+      }
+    },
+    "win": {
+      "icon": "res/icon.ico"
+    }
+  },
+  "scripts": {
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "dependencies": {
+    "node-windows": "^0.1.14"
+  }
+}
